@@ -1,4 +1,4 @@
-## Manipulando Array: 
+## 🔖 Manipulando Array: 
 
 - [X] map 
 - [X] forEach
@@ -6,51 +6,102 @@
 - [X] find
 - [X] some
 - [X] every
-- [X] findIndex
+- [X] findIndex 
 - [X] includes
-- [ ] join
-- [ ] pop
-- [ ] push
-- [ ] sort
-- [ ] shift
-- [ ] slice
+- [X] join
+- [X] pop
+- [X] push
+- [X] sort
+- [X] shift
+- [X] slice
 
 --- 
 
 ### map
 
-Retorna um novo array com os elementos novos de acordo com o que foi pedido,  
-Ex: multiplicar todos os números por 2
+Retorna um array com os elementos novos de acordo com o que foi pedido  
+
+```javascript
+	//multiplicar todos os números por 2
+	
+	let numeros = [2,3,4,5,6,7];
+	let multiplica = numeros.map(p => p * 2 ); 
+```
 
 ### filter
 
 Retorna um array com os elementos que se encaixam no que foi pedido  
-Ex: retornar só as músicas que são do Baiana System
+
+```javascript
+	//retornar só as músicas que são do BaianaSystem
+	
+	const musicas = [
+		{nome: 'Fogo', artista: 'BaianaSystem'},
+		{nome: 'She´s my Religin', artista: 'Pale Waves'},
+		{nome: 'Skin', artista: 'Sabrina Carpenter'},
+		{nome: 'Criado Mudo', artista: 'BaianaSystem'}
+	]
+	
+	let isBaianaSystem = musicas.filter(p => p.artista == 'BaianaSystem');
+	//[{nome: 'Fogo', artista: 'BaianaSystem'},{nome: 'Criado Mudo', artista: 'BaianaSystem'}]
+```
 
 ### forEach
 
-Vai percorrer pelo array todo, é parecido com o for  
-Ex: percorrer pelo array todo e imprimir só os nomes dentro de um objeto
+Vai percorrer o array todo, ele é parecido com o `for`
+
+```javascript
+	const numeros = [2,5,6,14,2,3];
+	
+	numeros.forEach((item, indice) => {
+		console.log(item);
+	})
+
+```
 
 ### find
 
 Vai retornar o primeiro elemento que se encaixa no que foi pedido  
-Ex: [2,4,7,12,14,17] -> se eu pedir para retornar somente elementos maior que 10, ele vai retornar o 12, pois ele é o primeiro que se encaixa no que foi pedido.
 
+```javascript
+	//número maior que 10
+	
+	const numeros = [2,5,6,14,2,3];
+	const maiorQueDez = numeros.find(element => element > 10); //14
+
+```
 
 ### some
 
-Retorna true ou false  
-Ex: [2,4,5,66] -> se eu perguntar se nesse array tem algum elemento maior que 10, ele vai me retornar true,mas se eu perguntar se tem algum elemento maior que 66, ele retorna false.  
+Retorna true ou false para o teste que é passado. Pelo menos um elemento tem que passar no teste para poder retornar true.
+
+```javascript
+	//números menores que 5
+	
+	const numeros = [2,4,5,66];
+	const menorQueCinco = valores.some(item => item < 5); //true
+```
 
 ### every
 
 Retorna true ou false, mas para retornar um deles, todos os elementos precisam passar pelo teste
-Ex: [4,8,12,16,20] -> se eu passar um teste, onde pergunto se todos os elementos são maior que 10, ele retorna false, pois nem todos são maior que 10. Caso eu pergunte se todos os elementos são maior que 2, ele retorna true, pois todos se encaixam no teste.
+
+```javascript
+	// nenhum dos elementos é maior que 50, então retorna false;
+	// todos os elementos são menor que 100, então retorna true;
+	
+	const numeros = [10,20,30,40,50];
+	
+	const maioresCinquenta = numeros.every(item => item > 50); //false
+	
+	const menoresCem = numeros.every(item => item < 100); //true
+```
 
 ### *some x every*
 
-O some retorna true ou false caso um dos elementos atenda o teste. Já o every, eu preciso que todos os elementos atendam a esse teste, tanto para ser true ou false.
+	O some retorna true ou false caso um dos elementos atenda o teste. 
+	Já o every, eu preciso que todos os elementos atendam a esse teste, tanto para ser true ou false.
+
 
 ### findIndex
 
@@ -63,3 +114,31 @@ EX: [2,4,1,3,9] -> caso eu queira achar o indice do elemento 9, ele retorna o n�
 Retorna true ou false, caso o array tenha o elemento que foi passado.
 Ex: [10,20,30] -> caso no teste eu pergunte se tem um elemento 10, ele retorna true.
 caso eu pergunte se tem um elemento 5, ele retorna false.
+
+### join
+
+junta os elementos de um array, e depois pode separar eles com o que se passa por parametro
+EX: [1,9,2000] -> se eu usar o ('/') ele vai retornar os números separados pela barra invertida
+1/9/2000
+
+### pop
+
+vai remover o último elemento de um array e retornar ele.
+
+### push
+
+adiciona elementos ao array 
+
+### sort
+
+retorna um array com os elementos ordenados, mas é preciso passar uma função para fazer um ordenação certa. Pois ele utiliza o sistema unicode para ordenar.
+
+### shift
+
+vai remover o primeiro elemento de um array e retornar ele.
+
+### slice
+
+vai retornar um subarray com os elementos do array, depende de onde se inicia e termina.
+EX: [2,5,6,3] -> slice(0,2) -> vai retornar um array com os elementos [2,5];  
+	[0,1,2,3]
