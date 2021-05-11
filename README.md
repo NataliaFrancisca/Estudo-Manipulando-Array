@@ -88,7 +88,7 @@ Retorna true ou false, mas para retornar um deles, todos os elementos precisam p
 
 ```javascript
 	// nenhum dos elementos é maior que 50, então retorna false;
-	// todos os elementos são menor que 100, então retorna true;
+	// todos os elementos são menores que 100, então retorna true;
 	
 	const numeros = [10,20,30,40,50];
 	
