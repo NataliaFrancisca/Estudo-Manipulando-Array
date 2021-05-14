@@ -111,7 +111,6 @@ Retorna o index do elemento dentro de um array.
 	const nomes = ['maria', 'joão', 'luiza', 'ana', 'clara', 'paulo'];
 	
 	const indexAna = nomes.findIndex(element => element == 'ana'); //3
-	
 ```
 
 ### includes
@@ -122,7 +121,6 @@ Retorna true ou false caso o array tenha o elemento que foi passado.
 	const notas = [6,5,8,8,10,9];
 	
 	const notaDez = notas.includes(10); //true
-	
 ```
 ### join
 
@@ -134,7 +132,6 @@ Junta os elementos de um array e depois pode separar eles com o que se passa por
 	
 	const dataNascimento = nascimento.join('/'); // 9/1/2000
 	const meuEmail = email.join(''); //meuemail@gmail.com
-	
 ```
 ### pop
 
@@ -146,7 +143,6 @@ Vai remover o último elemento de um array e retornar ele.
 	const chegouPorUltimo = nomes.pop(); //José
 	
 	console.log(nomes) // ['Maria', 'João', 'Luiza', 'Clara'];
-	
 ```
 
 ### push
@@ -159,7 +155,6 @@ Adiciona elementos ao array
 	frutas.push('Morango');
 	
 	console.log(frutas) // ['Banana', 'Maça', 'Laranja', 'Manga', 'Morango'];
-	
 ```
 
 ### sort
@@ -189,7 +184,6 @@ Vai remover o primeiro elemento de um array e retornar ele.
 	const primeiraFruta = frutas.shift(); // Banana
 	
 	console.log(frutas) // ['Maça', 'Laranja', 'Manga'];
-	
 ```
 
 ### slice
@@ -203,5 +197,4 @@ Vai retornar um subarray com os elementos do array, depende de onde se inicia e 
 	const doisUtimosNumeros = numeros.slice(-2); // [6,7]
 	
 	const doisPrimeirosNumeros = numeris.slice(0,1) // [1,2]
-	
 ```
